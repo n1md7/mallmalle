@@ -1,0 +1,15 @@
+div.body-container {
+  position: fixed;
+  top: 74px !important;
+  width: 100%;
+  height: calc(100% - 74px);
+  border-radius: 16px !important;
+  background-color: white !important;
+  z-index: 1031 !important; // +1 to navBar value
+  overflow: hidden;
+  overflow-y: auto !important;
+}
+
+.line-through {
+  bottom: -48px;
+}

@@ -1,0 +1,33 @@
+.mm-card {
+  .current-value {
+    font-weight: bold;
+    margin-right: 16px;
+    font-size: 20px;
+  }
+
+  .discounted-value {
+    vertical-align: top;
+    color: silver;
+    text-decoration: line-through;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 6px;
+    color: silver;
+  }
+
+  .card {
+    border: 0 !important;
+  }
+
+  .card-body {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+
+  .card-img-top {
+    border-radius: 8px !important;
+  }
+}

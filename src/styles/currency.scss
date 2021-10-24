@@ -1,0 +1,132 @@
+.knobs {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+
+  span,
+  &:after,
+  &:before {
+    font-size: 14px !important;
+  }
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff6b;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+.button {
+  position: relative;
+  top: 50%;
+  width: 48px;
+  height: 28px;
+  overflow: hidden;
+  border-radius: 30px !important;
+}
+
+.checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+#currency-btn {
+  .knobs {
+    &:before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      width: 20px;
+      height: 20px;
+      font-size: 10px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 20px;
+      border-radius: 10px;
+      transition: 0.3s ease all;
+      content: "";
+      left: 4px;
+      background-color: #607189;
+    }
+
+    &:after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      width: 20px;
+      height: 20px;
+      font-size: 10px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 20px;
+      border-radius: 10px;
+      transition: 0.3s ease all;
+      content: "₾";
+      right: 4px;
+      color: white;
+    }
+
+    span {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      width: 20px;
+      height: 20px;
+      font-size: 10px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 20px;
+      border-radius: 10px;
+      transition: 0.3s ease all;
+      display: inline-block;
+      left: 4px;
+      color: #fff !important;
+      z-index: 1;
+    }
+  }
+
+  .checkbox {
+    &:checked {
+      + {
+        .knobs {
+          span {
+            color: #4e4e4e;
+          }
+
+          &:before {
+            left: 24px;
+            background-color: #6696d8;
+          }
+
+          &:after {
+            color: #fff;
+          }
+        }
+      }
+
+      ~ {
+        .layer {
+          //background-color: #fcebeb;
+        }
+      }
+    }
+  }
+}
